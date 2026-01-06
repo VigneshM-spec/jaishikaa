@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Mobile friendly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jaishikaa</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* ---------------- BUTTERFLIES ---------------- */
+    const container = document.querySelector('.butterfly-container');
+
+    function createButterfly() {
+        const butterfly = document.createElement('div');
+        butterfly.classList.add('butterfly');
+
+        const size = Math.random() * 20 + 30;
+        butterfly.style.width = size + 'px';
+        butterfly.style.height = size + 'px';
+
+        butterfly.style.top = Math.random() * window.innerHeight + 'px';
+        butterfly.style.left = '-60px';
+
+        const duration = Math.random() * 10 + 15;
+        butterfly.style.animationDuration = duration + 's';
+
+        container.appendChild(butterfly);
+
+        setTimeout(() => butterfly.remove(), duration * 1000);
+    }
+
+    setInterval(createButterfly, 2000);
+
+
+    /* ---------------- SCROLL FADE-IN ---------------- */
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+});
+</script>
+
+
+<body>
+<div class="butterfly-container"></div>
+
+<header>
+    <h1>Jaishikaa</h1>
+    <p class="subtitle">Welcome to my gallery</p>
+</header>
+
+<div class="container">
+
+    <div class="item">
+       <div class="blur-wrapper">
+    <img src="img1.jpeg">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+
+        <p>First time una paaka kanchipuram vanthapo edutha ticketuh😅purse la ye madichu vachukiten athu thermal paperathala print fade agitu</p>
+    </div>
+
+    <div class="item">
+        <div class="blur-wrapper">
+    <img src="img2.jpeg">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+
+        <p>Asusal ithu unakey theriyum aarvakolarula pannathu🧠</p>
+    </div>
+
+    <div class="item">
+        <div class="blur-wrapper">
+    <img src="img3.jpeg" alt="Image 3">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+
+        <p>Oru naal class la water bottel vittupoiten eduthu vainu sonila🫗</p>
+    </div>
+
+    <div class="item">
+        <div class="blur-wrapper">
+    <img src="img4.jpeg">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+
+        <p>Unoda 2nd year 1st sem timetabel enaku kuda epdila eluthi vachathu ila👽apro exam ku poriya elayanu papen sometimes mudichutu pogumbothu papen nee jawahar ta pesitu pova.</p>
+    </div>
+ 
+     <div class="item">
+        <div class="blur-wrapper">
+    <img src="img5.jpeg">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+
+        <p>2nd year 1stsem ne enga erupa,epo class uh epo free time nu elathayum trace panni kandupudichu notes potuvachukuten kandipa na maranthuruven💻🤓.oru nal clg la enga erukanu na ketapo solamatanu sonna neye kandupudichukonu sona kandipa nabagam erukahtutha unaku,apo ethala use panitha nee 4rth floor la erupanu sonney. </p>
+    </div> <div class="item">
+       <div class="blur-wrapper">
+    <img src="img6.jpeg">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+
+        <p>ithu enoda fav pic uh story potta, itha pathututha en heart a kudunganu mokka potten unta neeyum batharama vachukanu sonna instala🤦😂</p>
+    </div> <div class="item">
+        <div class="blur-wrapper">
+    <img src="img7.jpeg">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+
+        <p>ithu 2nd sem classes potta notes 1st pottamari intense ah trace pannala,na vendamnu erunthey epoyachum una patha apo mattum note panipen but na una paakurathu unaku theriyatha maritha papen epovum. last la errukra thula entha exam ku entha colour dress nu poturupen ithala ethuku paneynu enakey therla😶‍🌫️🫠</p>
+    </div> <div class="item">
+        <div class="blur-wrapper">
+    <img src="img8.jpeg">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+
+        <p>2nd sem exam timetable last time mari eluthuney atha pasanga pathutanuga kindal pananuga vitutey,apro reg no use pani etha download paniten simple ah 😌</p>
+    </div> <div class="item">
+        <div class="blur-wrapper">
+    <img src="img9.jpeg">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+
+        <p>valakampola arvakolarula panathutha ithuvum,kila poi paaru inum eruku👇🫠🙉</p>
+    </div> <div class="item">
+       <div class="blur-wrapper">
+    <img src="img10.jpeg">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+
+        <p>ithu renduthula eathu un veedu? enaku therinju ithuvatha erukanum🙃🏚️🏠</p>
+    </div> <div class="item">
+        <div class="blur-wrapper">
+    <img src="img11.jpeg">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+
+        <p>enaku eathunu therla atha rendayumey add paniten maybe rendumey ilama kuda erukalam but en ganipu padi ethula etho onu tha🧠🧠🧠 </p>
+    </div> <div class="item">
+        <div class="blur-wrapper">
+    <img src="img12.jpeg">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+
+        <p>Ithu goa ponapo baga beach la eluthunathu evanukum theriyama thaniyapoi eluthitu pics vids eduthutey itha evanachum patha varusampoora etha vachey ena pesuvanuga😂💯</p>
+    </div> <div class="item">
+        <div class="blur-wrapper">
+    <img src="img13.jpeg">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+
+        <p>personal ah enak un hairtexture pudikum atha intha hairclip ah goa la pathathum unaku alaga erukum nu vangitey un bday ku present ah tharalamnu anaa! epdi unta itha solrathu? epdi kudukrathu? kudutha ne vaangamatanu therinjum 💯entha thairiyathula itha vaanguneynu therla🤡</p>
+    </div>
+    <div class="item">
+        <div class="blur-wrapper">
+    <img src="img14.jpeg">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+        <p>ithuvum goa la samathamey ilama panathu tha 💯💯💯🤡raincoat colour unaku pudicha colour nu vanguney</p>
+    </div>
+
+
+
+          <div class="big-text">
+    Benefits of marrying me
+
+</div>
+
+<div class="point-text fade-in delay-2">
+    1. Cooking veg / non-veg (paal sadham spl).<br>
+    2. Vessel washing.<br>
+    3. Home cleaning.<br>
+    4. Washing clothes (washing machine).<br>
+    5. Tea / coffee / milk etc (home-made snacks).<br>
+    6. Travel – wherever you want.<br>
+    7. Caring – unlimited.<br>
+    8. Love – unlimited.<br>
+    9. Attention – unlimited.<br>
+    10. Loyalty – unlimited.<br>
+    11. Ego – only 0.01%.<br>
+    12. Teetotaler 😌 (once beer try paney – 2 sips).<br>
+    13. Romance – until 90 years old.<br>
+    14. No mamiyar tholai.<br>
+    15. No late reply (1-li-4-u).<br>
+    16. No disrespect.<br>
+    17. No fight.<br>
+    18. No anger (even if you hurt me into the core).<br>
+    19. No cheating.<br>
+    20. No side chick.<br>
+    21. No betrayal.<br>
+    22. No shouting against you.<br>
+    23. Buying whatever you want.<br>
+    24. Free hairstylist.<br>
+    25. Agreed to all your desires.<br>
+    26. Treating you like a queen / princess / baby.<br>
+    27. Understanding.<br>
+    28. Telugu-known boy.<br>
+    29. Decision making is yours (lifetime).<br>
+    30. Humble guy.<br>
+    31. Kind husband.<br>
+    32. Perfect babysitter.<br>
+    33. Obeying your words.<br>
+    34. No shyness to feel your feet.<br>
+    35. Stress-free life.
+
+    
+</div>
+
+<p>itha elam nee 1st time block pana anaiku anupalamnu type panni vachurthen eathula vaikurathunu theriyama STR dm la potu vitey😅🤦‍♂️</p>
+
+</div>
+ 
+
+
+    <div class="item">
+       <div class="blur-wrapper">
+    <img src="img15.jpeg">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+
+        <p> Frist time ne enak anupuna snap uh.chinatha oru bayathodatha open panney👽</p>
+    </div>
+
+    <div class="item">
+        <div class="blur-wrapper">
+    <img src="img16.jpeg">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+
+        <p> onam snap uh,saree la alaye kanumnu erunthey neye anupita.god bless you my child 💯🙌.pasanga tha ne enga erukanu sonanuga apro tha pathey,onam mudinju jawahar una bus ethivitu poguravar pathey.</p>
+    </div>
+
+
+    <div class="item">
+        <div class="blur-wrapper">
+    <img src="img17.jpeg" alt="Image 3">
+    <div class="blur-overlay">
+        <span>Tap to reveal 💗</span>
+    </div>
+</div>
+
+        <p> evlo pics erunthalum ethutha enak pudichathu idk why nama konjo nalla pesa arambichapaye theriyum epdiyum romba naal ethu nilaikathunu oru nal kandipa ena block panirubvanum theriyum atha apovey screenrecord panivachutey highlights ah.at the end na guess panamari tha achu. en prediction enaikum tapey agathu💯😎</p>
+    </div>
+
+    <div class="video-section">
+    <video controls>
+        <source src="vidio j.mp4" type="video/mp4">
+        Your browser does not support the video.
+    </video>
+</div>
+
+        <p>intha videos la eruka elam once intha website vitu viliya vanthathum del paniten so ivan enada evlo pics eduthuvachurkaney ena seivanu nanaikavo bayapadavo venda</p>
+
+
+  
+
+
+
+    
+
+
+
+
+
+</div>
+<script>
+document.querySelectorAll('.blur-overlay').forEach(overlay => {
+    overlay.addEventListener('click', () => {
+        overlay.classList.add('hide');
+        overlay.parentElement.classList.add('reveal');
+    });
+});
+</script>
+
+</body>
+</html>

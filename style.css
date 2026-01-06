@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+body {
+    background-color: #ff76c8;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+.subtitle {
+    font-size: 16px;
+}
+
+/* Main content */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Image block */
+.item {
+    margin-bottom: 40px;
+}
+
+/* 3D floating image (SINGLE correct version) */
+.item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    animation: float 4s ease-in-out infinite;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.item img:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.35);
+}
+
+/* Image caption */
+.item p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Video */
+.video-section {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.video-section video {
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Realistic floating image effect */
+.item img {
+    animation: realisticFloat 6s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes realisticFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-4px) rotate(0.3deg);
+    }
+    50% {
+        transform: translateY(-7px) rotate(-0.3deg);
+    }
+    75% {
+        transform: translateY(-3px) rotate(0.2deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+/* OPTIONAL: different floating speed for realism */
+.item:nth-child(odd) img {
+    animation-duration: 7s;
+}
+
+.item:nth-child(even) img {
+    animation-duration: 5.5s;
+}
+
+
+/* Scroll fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Butterfly background */
+.butterfly-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.butterfly {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    opacity: 0.9;
+    animation: fly linear infinite;
+
+    /* DARK PINK BUTTERFLY */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23b0004d' d='M32 32c-6-12-22-18-28-6 6 12 18 14 28 6zm0 0c6-12 22-18 28-6-6 12-18 14-28 6z'/%3E%3C/svg%3E");
+
+    /* DARKNESS + DEPTH */
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6));
+}
+
+
+/* Butterfly flying */
+@keyframes fly {
+    from {
+        transform: translateX(-60px) translateY(0) rotate(0deg);
+    }
+    to {
+        transform: translateX(110vw) translateY(-200px) rotate(360deg);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+}
+/* Wrapper */
+.blur-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+/* Media */
+.blur-wrapper img,
+.blur-wrapper video {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+    transform: scale(1.03);
+    filter: brightness(0.9);
+    transition: transform 1.2s ease, filter 1.2s ease;
+}
+
+/* Blur overlay */
+.blur-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 1.2s ease;
+}
+
+/* Text */
+.blur-overlay span {
+    font-size: 22px;
+    font-weight: 600;
+    color: #b0005f;
+    animation: pulse 2s infinite;
+}
+
+/* Unlock state */
+.blur-overlay.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Reveal effect */
+.blur-wrapper.reveal img,
+.blur-wrapper.reveal video {
+    transform: scale(1);
+    filter: brightness(1);
+}
+
+/* Soft pulse text */
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
